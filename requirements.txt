@@ -1,0 +1,9 @@
+llama-cpp-python
+langchain
+sentence-transformers
+faiss-cpu
+unstructured
+pypdf
+gradio
+markdown
+langchain_community
