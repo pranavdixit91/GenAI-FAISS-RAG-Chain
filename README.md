@@ -54,6 +54,29 @@ python app/vectorizer.py
 python app/rag_chatbot.py
 ```
 
+## Using the Chatbot UI
+
+1. After starting the RAG chatbot, open your web browser and navigate to:
+```bash
+http://localhost:7860/
+```
+
+2. The chat interface will appear where you can interact with the chatbot.
+
+## Prompting Guidelines
+
+When interacting with the chatbot:
+- Be specific and clear with your questions
+- The chatbot will use the context from your documents in the `docs/` folder to provide relevant answers
+- You can ask questions about the content in your documents, and the system will retrieve the most relevant information
+- For best results, phrase your questions naturally and include key terms that match your document content
+- The chatbot can handle both general queries and specific questions about the information in your documents
+
+Example prompts:
+- "What are the main attractions in Pune?"
+- "Who are famous Personalities from Pune?"
+- "Tell me more about [specific topic from your documents]"
+
 ## Features
 
 - Document vectorization and storage using FAISS
