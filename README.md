@@ -90,6 +90,37 @@ The project uses default configurations, but you can modify parameters in the re
 - `vectorizer.py`: Document processing and embedding settings
 - `rag_chatbot.py`: Model parameters and RAG chain configuration
 
+## Docker Implementation
+
+The project includes a Dockerfile for containerized deployment. The Docker implementation:
+- Uses Python 3.8-slim as the base image
+- Automatically downloads the Phi-2 model during build
+- Creates necessary directory structure
+- Installs all required dependencies
+- Exposes port 7860 for the web interface
+
+### Building and Running with Docker
+
+1. Build the Docker image:
+```bash
+docker build -t rag-chatbot .
+```
+
+2. Run the container:
+```bash
+docker run -p 7860:7860 rag-chatbot
+```
+
+3. Access the application:
+- Open your web browser and navigate to `http://localhost:7860`
+- The chatbot interface will be available for interaction
+
+### Docker Volume (Optional)
+To persist data and use your own documents, you can mount a volume:
+```bash
+docker run -p 7860:7860 -v /path/to/your/docs:/app/docs rag-chatbot
+```
+
 ## Contributing
 
 Feel free to submit issues, fork the repository, and create pull requests for any improvements.
